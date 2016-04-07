@@ -11,10 +11,15 @@ def continue_play():
  
     repeat = 1   
     while repeat > 0:
-        to_split = raw_input(">>") 
-        to_split = to_split.strip()
-        tokens = to_split.split(" ")
-
+        user_input = raw_input(">>") 
+        user_input = user_input.strip()
+        tokens = user_input.split(" ")
+        for item in tokens:
+                if item == '':
+                    tokens.remove('')
+                else:
+                    pass            
+                    
         operator = tokens[0]
 
         if operator == '+':
